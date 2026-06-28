@@ -49,6 +49,7 @@ raw_data/
 processed_data/
 cache/
 wavelet_dataset/*.npz
+wavelet_dataset_leakfree/
 DAG/PureData/
 DAG/Noise/
 

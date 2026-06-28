@@ -1,0 +1,65 @@
+npz_path,check_type,split,split_b,status,n_samples,shape,dtype,label_key,label_count,label_distribution,nan_count,internal_duplicate_count,exact_duplicate_count,notes
+wavelet_dataset/Bearing_20_0.npz,file,,,pass,,,,,,,,,,"keys=['cross_finetune_label', 'cross_finetune_set', 'cross_test_label', 'cross_test_set', 'label_mapping', 'test_label', 'test_set', 'train_label', 'train_set', 'valid_label', 'valid_set']; missing_required=[]"
+wavelet_dataset/Bearing_20_0.npz,split,train_set,,pass,5455,5455x6x6x1024,float64,train_label,5455,0:1091|1:1091|2:1091|3:1091|4:1091,0,0,,
+wavelet_dataset/Bearing_20_0.npz,split,valid_set,,pass,510,510x6x6x1024,float64,valid_label,510,0:102|1:102|2:102|3:102|4:102,0,0,,
+wavelet_dataset/Bearing_20_0.npz,split,test_set,,pass,680,680x6x6x1024,float64,test_label,680,0:136|1:136|2:136|3:136|4:136,0,0,,
+wavelet_dataset/Bearing_20_0.npz,split,cross_finetune_set,,pass,510,510x6x6x1024,float64,cross_finetune_label,510,0:102|1:102|2:102|3:102|4:102,0,0,,
+wavelet_dataset/Bearing_20_0.npz,split,cross_test_set,,pass,6140,6140x6x6x1024,float64,cross_test_label,6140,0:1228|1:1228|2:1228|3:1228|4:1228,0,0,,
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,train_set,valid_set,pass,5455|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,train_set,test_set,pass,5455|680,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,train_set,cross_finetune_set,pass,5455|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,train_set,cross_test_set,fail,5455|6140,,,,,,,,3643,duplicate_rate_a=0.66782768; duplicate_rate_b=0.59332248
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,valid_set,test_set,pass,510|680,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,valid_set,cross_finetune_set,pass,510|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,valid_set,cross_test_set,pass,510|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,test_set,cross_finetune_set,pass,680|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,test_set,cross_test_set,pass,680|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_20_0.npz,between_split_duplicate,cross_finetune_set,cross_test_set,pass,510|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,file,,,pass,,,,,,,,,,"keys=['cross_finetune_label', 'cross_finetune_set', 'cross_test_label', 'cross_test_set', 'label_mapping', 'test_label', 'test_set', 'train_label', 'train_set', 'valid_label', 'valid_set']; missing_required=[]"
+wavelet_dataset/Bearing_30_2.npz,split,train_set,,pass,8190,8190x6x6x1024,float64,train_label,8190,0:1638|1:1638|2:1638|3:1638|4:1638,0,0,,
+wavelet_dataset/Bearing_30_2.npz,split,valid_set,,pass,765,765x6x6x1024,float64,valid_label,765,0:153|1:153|2:153|3:153|4:153,0,0,,
+wavelet_dataset/Bearing_30_2.npz,split,test_set,,pass,1020,1020x6x6x1024,float64,test_label,1020,0:204|1:204|2:204|3:204|4:204,0,0,,
+wavelet_dataset/Bearing_30_2.npz,split,cross_finetune_set,,pass,765,765x6x6x1024,float64,cross_finetune_label,765,0:153|1:153|2:153|3:153|4:153,0,0,,
+wavelet_dataset/Bearing_30_2.npz,split,cross_test_set,,pass,9210,9210x6x6x1024,float64,cross_test_label,9210,0:1842|1:1842|2:1842|3:1842|4:1842,0,0,,
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,train_set,valid_set,pass,8190|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,train_set,test_set,pass,8190|1020,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,train_set,cross_finetune_set,pass,8190|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,train_set,cross_test_set,pass,8190|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,valid_set,test_set,pass,765|1020,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,valid_set,cross_finetune_set,pass,765|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,valid_set,cross_test_set,pass,765|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,test_set,cross_finetune_set,pass,1020|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,test_set,cross_test_set,pass,1020|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Bearing_30_2.npz,between_split_duplicate,cross_finetune_set,cross_test_set,pass,765|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,file,,,pass,,,,,,,,,,"keys=['cross_finetune_label', 'cross_finetune_set', 'cross_test_label', 'cross_test_set', 'label_mapping', 'test_label', 'test_set', 'train_label', 'train_set', 'valid_label', 'valid_set']; missing_required=[]"
+wavelet_dataset/Gear_20_0.npz,split,train_set,,pass,5455,5455x6x6x1024,float64,train_label,5455,0:1091|1:1091|2:1091|3:1091|4:1091,0,0,,
+wavelet_dataset/Gear_20_0.npz,split,valid_set,,pass,510,510x6x6x1024,float64,valid_label,510,0:102|1:102|2:102|3:102|4:102,0,0,,
+wavelet_dataset/Gear_20_0.npz,split,test_set,,pass,680,680x6x6x1024,float64,test_label,680,0:136|1:136|2:136|3:136|4:136,0,0,,
+wavelet_dataset/Gear_20_0.npz,split,cross_finetune_set,,pass,510,510x6x6x1024,float64,cross_finetune_label,510,0:102|1:102|2:102|3:102|4:102,0,0,,
+wavelet_dataset/Gear_20_0.npz,split,cross_test_set,,pass,6140,6140x6x6x1024,float64,cross_test_label,6140,0:1228|1:1228|2:1228|3:1228|4:1228,0,0,,
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,train_set,valid_set,pass,5455|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,train_set,test_set,pass,5455|680,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,train_set,cross_finetune_set,pass,5455|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,train_set,cross_test_set,fail,5455|6140,,,,,,,,2821,duplicate_rate_a=0.51714024; duplicate_rate_b=0.45944625
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,valid_set,test_set,pass,510|680,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,valid_set,cross_finetune_set,pass,510|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,valid_set,cross_test_set,pass,510|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,test_set,cross_finetune_set,pass,680|510,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,test_set,cross_test_set,pass,680|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_20_0.npz,between_split_duplicate,cross_finetune_set,cross_test_set,pass,510|6140,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,file,,,pass,,,,,,,,,,"keys=['cross_finetune_label', 'cross_finetune_set', 'cross_test_label', 'cross_test_set', 'label_mapping', 'test_label', 'test_set', 'train_label', 'train_set', 'valid_label', 'valid_set']; missing_required=[]"
+wavelet_dataset/Gear_30_2.npz,split,train_set,,pass,8190,8190x6x6x1024,float64,train_label,8190,0:1638|1:1638|2:1638|3:1638|4:1638,0,0,,
+wavelet_dataset/Gear_30_2.npz,split,valid_set,,pass,765,765x6x6x1024,float64,valid_label,765,0:153|1:153|2:153|3:153|4:153,0,0,,
+wavelet_dataset/Gear_30_2.npz,split,test_set,,pass,1020,1020x6x6x1024,float64,test_label,1020,0:204|1:204|2:204|3:204|4:204,0,0,,
+wavelet_dataset/Gear_30_2.npz,split,cross_finetune_set,,pass,765,765x6x6x1024,float64,cross_finetune_label,765,0:153|1:153|2:153|3:153|4:153,0,0,,
+wavelet_dataset/Gear_30_2.npz,split,cross_test_set,,pass,9210,9210x6x6x1024,float64,cross_test_label,9210,0:1842|1:1842|2:1842|3:1842|4:1842,0,0,,
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,train_set,valid_set,pass,8190|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,train_set,test_set,pass,8190|1020,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,train_set,cross_finetune_set,pass,8190|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,train_set,cross_test_set,pass,8190|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,valid_set,test_set,pass,765|1020,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,valid_set,cross_finetune_set,pass,765|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,valid_set,cross_test_set,pass,765|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,test_set,cross_finetune_set,pass,1020|765,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,test_set,cross_test_set,pass,1020|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000
+wavelet_dataset/Gear_30_2.npz,between_split_duplicate,cross_finetune_set,cross_test_set,pass,765|9210,,,,,,,,0,duplicate_rate_a=0.00000000; duplicate_rate_b=0.00000000

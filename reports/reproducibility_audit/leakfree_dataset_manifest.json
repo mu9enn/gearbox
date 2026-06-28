@@ -1,0 +1,759 @@
+{
+  "git_commit": "7636f1c97a5f22a30074c5189269fffd5db08e46",
+  "script": "tools/build_leakfree_wavelet_dataset.py",
+  "timestamp": "2026-06-28T16:38:18.278638+00:00",
+  "dry_run": true,
+  "source": "DataSets/SEU",
+  "source_files": [
+    "DataSets/SEU/bearing_set/ball_20_0.csv",
+    "DataSets/SEU/bearing_set/ball_30_2.csv",
+    "DataSets/SEU/bearing_set/comb_20_0.csv",
+    "DataSets/SEU/bearing_set/comb_30_2.csv",
+    "DataSets/SEU/bearing_set/health_20_0.csv",
+    "DataSets/SEU/bearing_set/health_30_2.csv",
+    "DataSets/SEU/bearing_set/inner_20_0.csv",
+    "DataSets/SEU/bearing_set/inner_30_2.csv",
+    "DataSets/SEU/bearing_set/outer_20_0.csv",
+    "DataSets/SEU/bearing_set/outer_30_2.csv",
+    "DataSets/SEU/gear_set/Chipped_20_0.csv",
+    "DataSets/SEU/gear_set/Chipped_30_2.csv",
+    "DataSets/SEU/gear_set/Health_20_0.csv",
+    "DataSets/SEU/gear_set/Health_30_2.csv",
+    "DataSets/SEU/gear_set/Miss_20_0.csv",
+    "DataSets/SEU/gear_set/Miss_30_2.csv",
+    "DataSets/SEU/gear_set/Root_20_0.csv",
+    "DataSets/SEU/gear_set/Root_30_2.csv",
+    "DataSets/SEU/gear_set/Surface_20_0.csv",
+    "DataSets/SEU/gear_set/Surface_30_2.csv"
+  ],
+  "source_file_sizes": {
+    "DataSets/SEU/bearing_set/ball_20_0.csv": 79957011,
+    "DataSets/SEU/bearing_set/ball_30_2.csv": 80200560,
+    "DataSets/SEU/bearing_set/comb_20_0.csv": 79868771,
+    "DataSets/SEU/bearing_set/comb_30_2.csv": 80269961,
+    "DataSets/SEU/bearing_set/health_20_0.csv": 80061736,
+    "DataSets/SEU/bearing_set/health_30_2.csv": 80208353,
+    "DataSets/SEU/bearing_set/inner_20_0.csv": 80129050,
+    "DataSets/SEU/bearing_set/inner_30_2.csv": 80291118,
+    "DataSets/SEU/bearing_set/outer_20_0.csv": 79732483,
+    "DataSets/SEU/bearing_set/outer_30_2.csv": 80174707,
+    "DataSets/SEU/gear_set/Chipped_20_0.csv": 80055432,
+    "DataSets/SEU/gear_set/Chipped_30_2.csv": 80257645,
+    "DataSets/SEU/gear_set/Health_20_0.csv": 80323854,
+    "DataSets/SEU/gear_set/Health_30_2.csv": 80317583,
+    "DataSets/SEU/gear_set/Miss_20_0.csv": 80165741,
+    "DataSets/SEU/gear_set/Miss_30_2.csv": 80290321,
+    "DataSets/SEU/gear_set/Root_20_0.csv": 80220486,
+    "DataSets/SEU/gear_set/Root_30_2.csv": 80270482,
+    "DataSets/SEU/gear_set/Surface_20_0.csv": 80115358,
+    "DataSets/SEU/gear_set/Surface_30_2.csv": 80296794
+  },
+  "source_file_hashes_if_feasible": {
+    "DataSets/SEU/bearing_set/ball_20_0.csv": {
+      "size_bytes": 79957011,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/ball_30_2.csv": {
+      "size_bytes": 80200560,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/comb_20_0.csv": {
+      "size_bytes": 79868771,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/comb_30_2.csv": {
+      "size_bytes": 80269961,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/health_20_0.csv": {
+      "size_bytes": 80061736,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/health_30_2.csv": {
+      "size_bytes": 80208353,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/inner_20_0.csv": {
+      "size_bytes": 80129050,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/inner_30_2.csv": {
+      "size_bytes": 80291118,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/outer_20_0.csv": {
+      "size_bytes": 79732483,
+      "sha256": null
+    },
+    "DataSets/SEU/bearing_set/outer_30_2.csv": {
+      "size_bytes": 80174707,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Chipped_20_0.csv": {
+      "size_bytes": 80055432,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Chipped_30_2.csv": {
+      "size_bytes": 80257645,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Health_20_0.csv": {
+      "size_bytes": 80323854,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Health_30_2.csv": {
+      "size_bytes": 80317583,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Miss_20_0.csv": {
+      "size_bytes": 80165741,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Miss_30_2.csv": {
+      "size_bytes": 80290321,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Root_20_0.csv": {
+      "size_bytes": 80220486,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Root_30_2.csv": {
+      "size_bytes": 80270482,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Surface_20_0.csv": {
+      "size_bytes": 80115358,
+      "sha256": null
+    },
+    "DataSets/SEU/gear_set/Surface_30_2.csv": {
+      "size_bytes": 80296794,
+      "sha256": null
+    }
+  },
+  "seed": 2026,
+  "split_policy": {
+    "name": "raw_contiguous_blocks_before_resample_window_wavelet",
+    "ratios": {
+      "train": 0.7,
+      "valid": 0.1,
+      "test": 0.1,
+      "cross_finetune": 0.05,
+      "cross_test": 0.05
+    },
+    "guard_rows_between_splits": 5120,
+    "window_step": 1024,
+    "no_cross_test_reuse_of_train_valid_test_rows": true,
+    "cross_finetune_policy": "dedicated raw block disjoint from train/valid/test/cross_test"
+  },
+  "wavelet_type": "db4",
+  "wavelet_layers": 5,
+  "segment_length": 1024,
+  "resample_policy": {
+    "method": "angle_resample",
+    "fs": 5120,
+    "angle_fs": 256,
+    "rpm_by_condition": {
+      "Bearing_20_0": 1200,
+      "Bearing_30_2": 1800,
+      "Gear_20_0": 1200,
+      "Gear_30_2": 1800
+    }
+  },
+  "normalization_policy": "none_in_dataset_builder",
+  "output_files": {
+    "Bearing_20_0": "wavelet_dataset_leakfree/Bearing_20_0.npz",
+    "Bearing_30_2": "wavelet_dataset_leakfree/Bearing_30_2.npz",
+    "Gear_20_0": "wavelet_dataset_leakfree/Gear_20_0.npz",
+    "Gear_30_2": "wavelet_dataset_leakfree/Gear_30_2.npz"
+  },
+  "output_keys": [
+    "train_set",
+    "train_label",
+    "valid_set",
+    "valid_label",
+    "test_set",
+    "test_label",
+    "cross_finetune_set",
+    "cross_finetune_label",
+    "cross_test_set",
+    "cross_test_label",
+    "label_mapping"
+  ],
+  "output_shapes": {},
+  "split_hash_summary": "not_computed_in_builder; run tools/validate_npz_contract.py after actual build",
+  "planned_raw_splits": {
+    "Bearing_20_0": {
+      "ball_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "comb_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "health_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "inner_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "outer_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      }
+    },
+    "Bearing_30_2": {
+      "ball_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "comb_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "health_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "inner_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "outer_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      }
+    },
+    "Gear_20_0": {
+      "chipped_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "Health_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "miss_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "root_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "surface_20_0": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      }
+    },
+    "Gear_30_2": {
+      "chipped_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "Health_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "miss_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "root_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      },
+      "surface_30_2": {
+        "status": "planned",
+        "source_rows_after_skip": 1048560,
+        "raw_split_bounds": {
+          "train": [
+            0,
+            719656
+          ],
+          "valid": [
+            724776,
+            827584
+          ],
+          "test": [
+            832704,
+            935512
+          ],
+          "cross_finetune": [
+            940632,
+            992036
+          ],
+          "cross_test": [
+            997156,
+            1048560
+          ]
+        },
+        "minimum_window_length": 1024,
+        "guard_rows_between_splits": 5120
+      }
+    }
+  },
+  "known_limitations": [
+    "Each fault-condition CSV appears to be one continuous sequence; this builder prevents exact row reuse via raw contiguous split blocks but cannot create independent source runs where none exist.",
+    "Dry-run does not generate npz files or compute split hashes.",
+    "Full source sha256 is only computed when --hash-source-files is provided."
+  ]
+}
