@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-06-28T17:22:17.943097+00:00",
+  "git_commit": "f27b14c9a3544f2871ab4b790a3ca98cb6e31219",
+  "script": "tools/export_pcdag_edges.py",
+  "pc_datasets": "PC_Datasets",
+  "include_seeds": [
+    "49"
+  ],
+  "include_average": true,
+  "alpha": 0.05,
+  "independence_test": "kci",
+  "algorithm": "causallearn.search.ConstraintBased.PC.pc",
+  "status": "ok",
+  "runs": [
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Bearing_20_0.csv",
+      "condition": "Bearing_20_0",
+      "seed_or_average": "49",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 13,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Bearing_20_0.csv",
+      "condition": "Bearing_20_0",
+      "seed_or_average": "49",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 10,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Bearing_30_2.csv",
+      "condition": "Bearing_30_2",
+      "seed_or_average": "49",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 13,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Bearing_30_2.csv",
+      "condition": "Bearing_30_2",
+      "seed_or_average": "49",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 8,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Gear_20_0.csv",
+      "condition": "Gear_20_0",
+      "seed_or_average": "49",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 12,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Gear_20_0.csv",
+      "condition": "Gear_20_0",
+      "seed_or_average": "49",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 10,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Gear_30_2.csv",
+      "condition": "Gear_30_2",
+      "seed_or_average": "49",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 13,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/Seed_49/Gear_30_2.csv",
+      "condition": "Gear_30_2",
+      "seed_or_average": "49",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 10,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Bearing_20_0.csv",
+      "condition": "Bearing_20_0",
+      "seed_or_average": "average",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 10,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Bearing_20_0.csv",
+      "condition": "Bearing_20_0",
+      "seed_or_average": "average",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 9,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Bearing_30_2.csv",
+      "condition": "Bearing_30_2",
+      "seed_or_average": "average",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 9,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Bearing_30_2.csv",
+      "condition": "Bearing_30_2",
+      "seed_or_average": "average",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 8,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Gear_20_0.csv",
+      "condition": "Gear_20_0",
+      "seed_or_average": "average",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 9,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Gear_20_0.csv",
+      "condition": "Gear_20_0",
+      "seed_or_average": "average",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 8,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Gear_30_2.csv",
+      "condition": "Gear_30_2",
+      "seed_or_average": "average",
+      "view": "channel",
+      "n_rows": 5115,
+      "n_edges": 9,
+      "status": "ok"
+    },
+    {
+      "source_pc_csv": "PC_Datasets/average/Gear_30_2.csv",
+      "condition": "Gear_30_2",
+      "seed_or_average": "average",
+      "view": "frequency",
+      "n_rows": 5115,
+      "n_edges": 8,
+      "status": "ok"
+    }
+  ],
+  "n_edges_total": 159,
+  "n_label_related_edges": 31
+}

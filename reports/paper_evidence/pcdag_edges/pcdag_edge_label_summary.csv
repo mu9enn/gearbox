@@ -1,0 +1,17 @@
+condition,seed_or_average,view,setting,alpha,n_edges_total,n_label_related_edges,features_connected_to_label,features_directed_to_label,features_directed_from_label,features_undirected_with_label,status,notes
+Bearing_20_0,49,channel,existing_wavelet_dag,0.05,13,3,ch3|ch7|ch8,ch3|ch7,ch8,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_20_0,49,frequency,existing_wavelet_dag,0.05,10,4,cD2|cD3|cD4|cD5,,cD2|cD3,cD4|cD5,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_20_0,average,channel,existing_wavelet_dag,0.05,10,0,,,,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_20_0,average,frequency,existing_wavelet_dag,0.05,9,3,cA5|cD3|cD5,,cD3|cD5,cA5,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_30_2,49,channel,existing_wavelet_dag,0.05,13,1,ch8,,ch8,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_30_2,49,frequency,existing_wavelet_dag,0.05,8,1,cD3,,,cD3,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_30_2,average,channel,existing_wavelet_dag,0.05,9,0,,,,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Bearing_30_2,average,frequency,existing_wavelet_dag,0.05,8,3,cD2|cD3|cD5,cD2|cD5,cD3,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_20_0,49,channel,existing_wavelet_dag,0.05,12,3,ch2|ch4|ch6,,ch2|ch4|ch6,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_20_0,49,frequency,existing_wavelet_dag,0.05,10,4,cA5|cD2|cD3|cD5,,cD2|cD3|cD5,cA5,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_20_0,average,channel,existing_wavelet_dag,0.05,9,0,,,,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_20_0,average,frequency,existing_wavelet_dag,0.05,8,2,cA5|cD3,,cA5|cD3,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_30_2,49,channel,existing_wavelet_dag,0.05,13,3,ch2|ch3|ch4,,ch2|ch3|ch4,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_30_2,49,frequency,existing_wavelet_dag,0.05,10,3,cD2|cD4|cD5,,cD2|cD4|cD5,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_30_2,average,channel,existing_wavelet_dag,0.05,9,0,,,,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW
+Gear_30_2,average,frequency,existing_wavelet_dag,0.05,8,1,cD3,,cD3,,ok,edge directions interpreted from causallearn endpoints TAIL/ARROW

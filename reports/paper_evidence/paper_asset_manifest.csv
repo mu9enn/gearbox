@@ -1,12 +1,7 @@
 asset_path,asset_type,experiment_family,paper_section_candidate,evidence_strength,can_use_in_main,can_use_in_supplement,needs_reproduction,known_risk,recommended_action,notes
-ModelTrain/NoAttention/SavedGraphs_6ch,figures,baseline_6ch,Diagnostic Baseline,B,True,True,True,figure_only_no_metrics_csv,export numeric metrics table,exists
-ModelTrain/NoAttention/ConfusionAndF1,figures,confusion_f1,Supplement,B,False,True,True,figure_only,export classification_report.csv,exists
-CalculateShapValues/NoAttention/Seed_*,large_npz,shap_no_attention,Explanation,A,False,False,False,large_cache_no_manifest,use extracted rank summaries,exists
-CalculateShapValues/NoAttention/TotalAnalysisGraphs,figures,shap_summary,Explanation,A,True,True,False,figure_only_has_extracted_csv,candidate main figures,exists
-PC_Datasets/Seed_49,csv,shap_to_pc_dataset,Causal Audit,B,True,True,True,input_table_not_edge_table,confirm data contract before final rerun,exists
-PC_Datasets/average,csv,shap_to_pc_dataset_average,Causal Audit,B,True,True,False,input_table_not_edge_table,use as candidate if provenance accepted,exists
-DAG/PC_DAG/Seed_49,figures,dual_view_pcdag,Causal Audit,A,True,True,True,edge_table_missing,export edge CSV next,exists
-reports/paper_evidence/attribution_causality_consistency_candidates.csv,csv,consistency_candidates,Causal Audit,B,False,False,True,causal_edge_unknown,fill edge columns after edge export,missing_or_pattern_unresolved
-ModelTrain/NoAttention/CrossCondTest,figure,cross_condition,Risk/Limitation,C,False,True,True,train_cross_test_overlap,do not use as strong evidence,exists
-GNNCausal,pt/png/pth,gnn_causal,Future Work,C,False,True,True,classifier_x_and_scaler_risk,quarantine until fixed,exists
-CWRU,png/pth,external_validation,Supplement/Future,C,False,True,True,metrics_not_unified,optional later,exists
+reports/paper_evidence/shap_seed_stability_summary.csv,csv,shap_ranking,Explanation,A,True,True,False,large SHAP source cache lacks config manifest,Use as Table 2 candidate,44 rows extracted across seeds
+reports/paper_evidence/pcdag_edges/pcdag_edges_long.csv,csv,pcdag_edge_export,Causal Audit,A-,True,True,False,Some edge directions conflict with intended label background knowledge,Use with direction caveat; verify before final wording,159 exported edges
+reports/paper_evidence/consistency/attribution_causality_consistency_table.csv,csv,attribution_causality_consistency,Causal Audit,A-,True,True,False,Direction caveat for unknown_edge_direction rows,Use as Table 3 candidate after human review of edge direction semantics,"consistency_counts={'low_shap_no_label_edge_uninformative': 16, 'low_shap_label_edge_underused_causal_feature': 3, 'unknown_edge_direction': 22, 'high_shap_label_edge_consistent': 1, 'high_shap_no_label_edge_potential_shortcut': 2}"
+reports/paper_evidence/baseline_metrics/baseline_metrics_long.csv,csv,baseline_metrics,Diagnostic Baseline,C,False,False,True,checkpoint expected width 512 but current wavelet_dataset width is 1024,Locate compatible dataset or export metrics from original evaluation context,baseline_status={'error': 20}
+DAG/PC_DAG/Seed_49,figures,dual_view_pcdag_figures,Causal Audit,A-,True,True,False,many settings; final alpha/seed choice must be frozen,Select representative figures using edge summaries,DAG figure assets already exist
+ModelTrain/NoAttention/CrossCondTest,figure,cross_condition,Limitation,C,False,True,True,train/cross_test exact duplicate in current wavelet_dataset,Use only as leakage limitation/risk note,Not strong robustness evidence

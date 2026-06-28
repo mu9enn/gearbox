@@ -1,0 +1,2 @@
+condition,split,metric,mean,std,n_seeds,seeds,status,notes
+,,,,,0,,no_successful_evaluations,See baseline_metrics_long.csv error rows.

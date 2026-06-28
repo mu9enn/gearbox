@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-06-28T17:22:33.473031+00:00",
+  "git_commit": "f27b14c9a3544f2871ab4b790a3ca98cb6e31219",
+  "script": "tools/export_baseline_metrics.py",
+  "dataset_dir": "wavelet_dataset",
+  "model_dir": "ModelTrain/NoAttention/SavedModels_6ch",
+  "splits": [
+    "test"
+  ],
+  "device": "cpu",
+  "status": "no_successful_evaluations",
+  "runs": [
+    {
+      "condition": "Bearing_20_0",
+      "seed": "42",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Bearing_20_0.pth",
+      "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_30_2",
+      "seed": "42",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Bearing_30_2.pth",
+      "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_20_0",
+      "seed": "42",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Gear_20_0.pth",
+      "dataset_path": "wavelet_dataset/Gear_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_30_2",
+      "seed": "42",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Gear_30_2.pth",
+      "dataset_path": "wavelet_dataset/Gear_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_20_0",
+      "seed": "49",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Bearing_20_0.pth",
+      "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_30_2",
+      "seed": "49",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Bearing_30_2.pth",
+      "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_20_0",
+      "seed": "49",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Gear_20_0.pth",
+      "dataset_path": "wavelet_dataset/Gear_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_30_2",
+      "seed": "49",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Gear_30_2.pth",
+      "dataset_path": "wavelet_dataset/Gear_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_20_0",
+      "seed": "56",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Bearing_20_0.pth",
+      "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_30_2",
+      "seed": "56",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Bearing_30_2.pth",
+      "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_20_0",
+      "seed": "56",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Gear_20_0.pth",
+      "dataset_path": "wavelet_dataset/Gear_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_30_2",
+      "seed": "56",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Gear_30_2.pth",
+      "dataset_path": "wavelet_dataset/Gear_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_20_0",
+      "seed": "63",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Bearing_20_0.pth",
+      "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_30_2",
+      "seed": "63",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Bearing_30_2.pth",
+      "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_20_0",
+      "seed": "63",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Gear_20_0.pth",
+      "dataset_path": "wavelet_dataset/Gear_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_30_2",
+      "seed": "63",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Gear_30_2.pth",
+      "dataset_path": "wavelet_dataset/Gear_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_20_0",
+      "seed": "70",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Bearing_20_0.pth",
+      "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Bearing_30_2",
+      "seed": "70",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Bearing_30_2.pth",
+      "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_20_0",
+      "seed": "70",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Gear_20_0.pth",
+      "dataset_path": "wavelet_dataset/Gear_20_0.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    },
+    {
+      "condition": "Gear_30_2",
+      "seed": "70",
+      "model_family": "no_attention_6ch",
+      "split": "test",
+      "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Gear_30_2.pth",
+      "dataset_path": "wavelet_dataset/Gear_30_2.npz",
+      "status": "error",
+      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+    }
+  ],
+  "n_checkpoints": 20,
+  "n_metric_rows": 20,
+  "n_successful_rows": 0
+}

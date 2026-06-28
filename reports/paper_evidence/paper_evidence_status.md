@@ -1,0 +1,27 @@
+# Paper Evidence Status
+
+## Main Evidence Available
+
+- SHAP seed-stability ranking is available: 44 rows.
+- PC-DAG edge export is available: 159 edges, 31 label-related edges.
+- Attribution-causality consistency table is available: 44 rows with counts {'low_shap_no_label_edge_uninformative': 16, 'low_shap_label_edge_underused_causal_feature': 3, 'unknown_edge_direction': 22, 'high_shap_label_edge_consistent': 1, 'high_shap_no_label_edge_potential_shortcut': 2}.
+
+## Main Evidence Still Missing
+
+- Baseline numeric metrics are not yet usable from current assets: all checkpoint evaluations failed because checkpoint input width is 512 while current `wavelet_dataset` width is 1024.
+- Some PC-DAG edge directions are `label->feature` or undirected/partially oriented; final manuscript wording needs human review of edge-direction interpretation.
+
+## Supplement Candidates
+
+- Existing confusion/F1 PNGs and attention/no-attention curves can support supplement after numeric export.
+- Existing CWRU/GNN assets remain optional and should not enter the main contribution.
+
+## Risk / Do Not Use As Strong Evidence
+
+- Old cross-condition results remain risk/reference only due to train/cross_test exact duplicates.
+- GNN causal enhancement remains future work because of the documented `classifier(x)` and scaler risks.
+
+## Next Minimal Engineering Task
+
+- Resolve baseline metric export by locating the original 512-width evaluation dataset or confirming the safe preprocessing slice used by the saved checkpoints.
+- Review PC-DAG edge-direction semantics, then freeze which consistency rows become the main conflict/consistency case studies.
