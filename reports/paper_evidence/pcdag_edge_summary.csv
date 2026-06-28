@@ -1,0 +1,2 @@
+condition,seed,view,setting,source_node,target_node,edge_direction,edge_weight_or_score,is_label_related,is_physical_prior_allowed,source_path,extraction_method,status,notes
+,,,,,,,,,,,not_available,needs_pcdag_rerun_for_edge_csv,"Existing DAG figures are available, but edge tables are not persisted; future PC-DAG generation should export edge CSV."

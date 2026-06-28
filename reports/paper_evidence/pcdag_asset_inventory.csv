@@ -1,0 +1,231 @@
+relative_path,asset_type,condition,seed,view,alpha_or_setting,original_or_filtered,contains_edge_table,contains_dag_figure,paper_role_candidate,notes
+PC_Datasets/PC_Datasets(normal).csv,structured_metric_candidate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+PC_Datasets/PC_Datasets(std).csv,structured_metric_candidate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+PC_Datasets/PC_Datasets.csv,structured_metric_candidate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+PC_Datasets/Seed_49/Bearing_20_0.csv,pc_dataset_csv,Bearing_20_0,49,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/Seed_49/Bearing_30_2.csv,pc_dataset_csv,Bearing_30_2,49,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/Seed_49/Gear_20_0.csv,pc_dataset_csv,Gear_20_0,49,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/Seed_49/Gear_30_2.csv,pc_dataset_csv,Gear_30_2,49,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/average/Bearing_20_0.csv,pc_dataset_csv,Bearing_20_0,unknown,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/average/Bearing_30_2.csv,pc_dataset_csv,Bearing_30_2,unknown,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/average/Gear_20_0.csv,pc_dataset_csv,Gear_20_0,unknown,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/average/Gear_30_2.csv,pc_dataset_csv,Gear_30_2,unknown,unknown,unknown,unknown,False,False,main_candidate,"PC input dataset, not learned edge table"
+PC_Datasets/feature_distribution.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+PC_Datasets/feature_normalized_bar.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/ball_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/ball_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/bearing_normal_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/bearing_normal_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/chipped_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/chipped_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/comb_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/comb_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/gear_normal_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/gear_normal_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/inner_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/inner_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/miss_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/miss_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/outer_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/outer_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/root_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/root_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/surface_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/Noise/surface_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PC_DAG/GearBox_PC_DAG.pdf,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_filtered.pdf,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_filtered.png,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_filtered_with_strength.pdf,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_filtered_with_strength.png,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_original.pdf,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_original.png,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_physical_prior.pdf,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/GearBox_PC_DAG_physical_prior.png,dag_figure,unknown,unknown,unknown,unknown,unknown,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0001/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0002/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.0005/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0005,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.001/average/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.001,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.002/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.002,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/filtered/Significance_0.05/average/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.05,filtered,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0001/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0002/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.0005/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.0005,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.001/average/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.001,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.002/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.002,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Bearing_20_0_ch.png,dag_figure,Bearing_20_0,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Bearing_20_0_freq.png,dag_figure,Bearing_20_0,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Bearing_30_2_ch.png,dag_figure,Bearing_30_2,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Bearing_30_2_freq.png,dag_figure,Bearing_30_2,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Gear_20_0_ch.png,dag_figure,Gear_20_0,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Gear_20_0_freq.png,dag_figure,Gear_20_0,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Gear_30_2_ch.png,dag_figure,Gear_30_2,49,channel,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PC_DAG/Seed_49/original/Significance_0.05/average/Gear_30_2_freq.png,dag_figure,Gear_30_2,49,frequency,0.05,original,False,True,main_candidate,DAG figure available; edge table not persisted
+DAG/PolyCurves/Noise/ball_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/ball_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/bearing_normal_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/bearing_normal_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/chipped_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/chipped_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/comb_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/comb_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/gear_normal_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/gear_normal_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/inner_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/inner_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/miss_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/miss_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/outer_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/outer_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/root_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/root_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/surface_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/Noise/surface_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/ball_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/ball_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/bearing_normal_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/bearing_normal_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/chipped_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/chipped_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/comb_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/comb_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/gear_normal_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/gear_normal_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/inner_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/inner_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/miss_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/miss_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/outer_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/outer_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/root_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/root_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/surface_20_0.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PolyCurves/surface_30_2.png,figure,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/ball_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/ball_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/bearing_normal_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/bearing_normal_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/chipped_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/chipped_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/comb_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/comb_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/gear_normal_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/gear_normal_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/inner_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/inner_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/miss_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/miss_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/outer_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/outer_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/root_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/root_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/surface_20_0.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,
+DAG/PureData/surface_30_2.npz,numeric_intermediate,unknown,unknown,unknown,unknown,unknown,False,False,reference,

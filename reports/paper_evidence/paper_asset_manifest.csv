@@ -1,0 +1,12 @@
+asset_path,asset_type,experiment_family,paper_section_candidate,evidence_strength,can_use_in_main,can_use_in_supplement,needs_reproduction,known_risk,recommended_action,notes
+ModelTrain/NoAttention/SavedGraphs_6ch,figures,baseline_6ch,Diagnostic Baseline,B,True,True,True,figure_only_no_metrics_csv,export numeric metrics table,exists
+ModelTrain/NoAttention/ConfusionAndF1,figures,confusion_f1,Supplement,B,False,True,True,figure_only,export classification_report.csv,exists
+CalculateShapValues/NoAttention/Seed_*,large_npz,shap_no_attention,Explanation,A,False,False,False,large_cache_no_manifest,use extracted rank summaries,exists
+CalculateShapValues/NoAttention/TotalAnalysisGraphs,figures,shap_summary,Explanation,A,True,True,False,figure_only_has_extracted_csv,candidate main figures,exists
+PC_Datasets/Seed_49,csv,shap_to_pc_dataset,Causal Audit,B,True,True,True,input_table_not_edge_table,confirm data contract before final rerun,exists
+PC_Datasets/average,csv,shap_to_pc_dataset_average,Causal Audit,B,True,True,False,input_table_not_edge_table,use as candidate if provenance accepted,exists
+DAG/PC_DAG/Seed_49,figures,dual_view_pcdag,Causal Audit,A,True,True,True,edge_table_missing,export edge CSV next,exists
+reports/paper_evidence/attribution_causality_consistency_candidates.csv,csv,consistency_candidates,Causal Audit,B,False,False,True,causal_edge_unknown,fill edge columns after edge export,missing_or_pattern_unresolved
+ModelTrain/NoAttention/CrossCondTest,figure,cross_condition,Risk/Limitation,C,False,True,True,train_cross_test_overlap,do not use as strong evidence,exists
+GNNCausal,pt/png/pth,gnn_causal,Future Work,C,False,True,True,classifier_x_and_scaler_risk,quarantine until fixed,exists
+CWRU,png/pth,external_validation,Supplement/Future,C,False,True,True,metrics_not_unified,optional later,exists
