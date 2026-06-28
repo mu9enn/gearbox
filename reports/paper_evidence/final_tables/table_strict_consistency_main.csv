@@ -1,0 +1,5 @@
+condition,view,feature_name,is_topk_shap,has_strict_feature_to_label_edge,strict_consistency_type,strict_evidence_strength,paper_interpretation
+Bearing_20_0,channel,ch3,False,True,low_shap_with_strict_causal_support_underused_feature,strong,low-attribution feature with strict feature-to-label PC-DAG support; underused graph-supported candidate
+Bearing_20_0,channel,ch7,False,True,low_shap_with_strict_causal_support_underused_feature,strong,low-attribution feature with strict feature-to-label PC-DAG support; underused graph-supported candidate
+Bearing_30_2,frequency,cD2,True,True,high_shap_strict_causal_support,strong,high-attribution feature with strict feature-to-label PC-DAG support
+Bearing_30_2,frequency,cD5,False,True,low_shap_with_strict_causal_support_underused_feature,strong,low-attribution feature with strict feature-to-label PC-DAG support; underused graph-supported candidate

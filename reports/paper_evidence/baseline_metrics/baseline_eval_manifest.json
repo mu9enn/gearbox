@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-06-28T17:22:33.473031+00:00",
-  "git_commit": "f27b14c9a3544f2871ab4b790a3ca98cb6e31219",
+  "timestamp": "2026-06-28T18:06:16.207098+00:00",
+  "git_commit": "c7ecdce58b4cee86db37543e8f78ca0366858085",
   "script": "tools/export_baseline_metrics.py",
   "dataset_dir": "wavelet_dataset",
   "model_dir": "ModelTrain/NoAttention/SavedModels_6ch",
@@ -8,7 +8,11 @@
     "test"
   ],
   "device": "cpu",
-  "status": "no_successful_evaluations",
+  "crop_width": 512,
+  "historical_width_caveat": true,
+  "human_researcher_confirmed_crop_assumption": true,
+  "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol",
+  "status": "ok",
   "runs": [
     {
       "condition": "Bearing_20_0",
@@ -17,8 +21,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Bearing_20_0.pth",
       "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_30_2",
@@ -27,8 +35,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Bearing_30_2.pth",
       "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_20_0",
@@ -37,8 +49,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Gear_20_0.pth",
       "dataset_path": "wavelet_dataset/Gear_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_30_2",
@@ -47,8 +63,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_42/Gear_30_2.pth",
       "dataset_path": "wavelet_dataset/Gear_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_20_0",
@@ -57,8 +77,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Bearing_20_0.pth",
       "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_30_2",
@@ -67,8 +91,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Bearing_30_2.pth",
       "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_20_0",
@@ -77,8 +105,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Gear_20_0.pth",
       "dataset_path": "wavelet_dataset/Gear_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_30_2",
@@ -87,8 +119,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_49/Gear_30_2.pth",
       "dataset_path": "wavelet_dataset/Gear_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_20_0",
@@ -97,8 +133,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Bearing_20_0.pth",
       "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_30_2",
@@ -107,8 +147,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Bearing_30_2.pth",
       "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_20_0",
@@ -117,8 +161,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Gear_20_0.pth",
       "dataset_path": "wavelet_dataset/Gear_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_30_2",
@@ -127,8 +175,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_56/Gear_30_2.pth",
       "dataset_path": "wavelet_dataset/Gear_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_20_0",
@@ -137,8 +189,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Bearing_20_0.pth",
       "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_30_2",
@@ -147,8 +203,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Bearing_30_2.pth",
       "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_20_0",
@@ -157,8 +217,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Gear_20_0.pth",
       "dataset_path": "wavelet_dataset/Gear_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_30_2",
@@ -167,8 +231,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_63/Gear_30_2.pth",
       "dataset_path": "wavelet_dataset/Gear_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_20_0",
@@ -177,8 +245,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Bearing_20_0.pth",
       "dataset_path": "wavelet_dataset/Bearing_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Bearing_30_2",
@@ -187,8 +259,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Bearing_30_2.pth",
       "dataset_path": "wavelet_dataset/Bearing_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_20_0",
@@ -197,8 +273,12 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Gear_20_0.pth",
       "dataset_path": "wavelet_dataset/Gear_20_0.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 680,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     },
     {
       "condition": "Gear_30_2",
@@ -207,11 +287,15 @@
       "split": "test",
       "checkpoint_path": "ModelTrain/NoAttention/SavedModels_6ch/Seed_70/Gear_30_2.pth",
       "dataset_path": "wavelet_dataset/Gear_30_2.npz",
-      "status": "error",
-      "error": "ValueError('incompatible_input_width: checkpoint_expected=512, dataset_width=1024')"
+      "status": "ok",
+      "n_samples": 1020,
+      "crop_width": 512,
+      "historical_width_caveat": true,
+      "human_researcher_confirmed_crop_assumption": true,
+      "note": "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
     }
   ],
   "n_checkpoints": 20,
   "n_metric_rows": 20,
-  "n_successful_rows": 0
+  "n_successful_rows": 20
 }

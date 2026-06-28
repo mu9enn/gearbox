@@ -1,0 +1,8 @@
+item,status,blocking_level,evidence_path,next_action,owner
+NoAttention baseline metrics on test_set,complete_with_caveat,P1,reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv,Use with historical-width caveat; do not use cross_test as main evidence.,Codex/ChatGPT
+SHAP stability main table,complete,non_blocking,reports/paper_evidence/final_tables/table_shap_stability_main.csv,ChatGPT selects final narrative features.,ChatGPT
+Strict feature_to_label consistency,complete_sparse,non_blocking,reports/paper_evidence/final_tables/table_strict_consistency_main.csv,Use strict direction only for listed cases.,ChatGPT
+Weak adjacency graph-consistency audit,complete,non_blocking,reports/paper_evidence/final_tables/table_weak_adjacency_audit_main.csv,Use conservative graph-consistency wording.,ChatGPT
+Framework overview figure,to_draw,P1,reports/paper_evidence/final_figures/selected_main_figures.csv,Author draws clean pipeline diagram.,human researcher
+Cross-condition evidence,limitation_only,non_blocking,reports/reproducibility_audit/full_split_overlap_report.csv,Do not use as strong robustness evidence.,ChatGPT
+GNN contribution,future_work_only,non_blocking,reports/reproducibility_audit/gnn_risk_report.md,Keep outside main contribution.,ChatGPT

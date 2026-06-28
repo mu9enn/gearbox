@@ -18,6 +18,10 @@ from sklearn.metrics import accuracy_score, classification_report, f1_score, pre
 
 
 CONDITIONS = ("Bearing_20_0", "Bearing_30_2", "Gear_20_0", "Gear_30_2")
+HISTORICAL_WIDTH_NOTE = (
+    "old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; "
+    "human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol"
+)
 
 
 def relpath(path: Path, root: Path) -> str:
@@ -186,6 +190,18 @@ def main() -> int:
     if args.max_checkpoints:
         checkpoints = checkpoints[: args.max_checkpoints]
 
+    crop_width = args.crop_width or ""
+    historical_width_caveat = str(bool(args.crop_width)).lower()
+    human_confirmed = str(args.crop_width == 512).lower()
+    caveat_note = HISTORICAL_WIDTH_NOTE if args.crop_width == 512 else ""
+
+    def caveat_fields() -> dict[str, str | int]:
+        return {
+            "crop_width": crop_width,
+            "historical_width_caveat": historical_width_caveat,
+            "human_researcher_confirmed_crop_assumption": human_confirmed,
+        }
+
     metric_rows = []
     report_rows = []
     manifest = {
@@ -197,6 +213,9 @@ def main() -> int:
         "splits": args.splits,
         "device": str(device),
         "crop_width": args.crop_width or None,
+        "historical_width_caveat": bool(args.crop_width),
+        "human_researcher_confirmed_crop_assumption": args.crop_width == 512,
+        "note": caveat_note,
         "status": "started",
         "runs": [],
     }
@@ -229,7 +248,9 @@ def main() -> int:
                         "loss": f"{result['loss']:.10f}",
                         "n_samples": result["n_samples"],
                         "status": "ok",
-                        "notes": f"evaluated_existing_checkpoint_no_cross_split; crop_width={args.crop_width or 'none'}",
+                        **caveat_fields(),
+                        "notes": f"evaluated_existing_checkpoint_no_cross_split; crop_width={args.crop_width or 'none'}"
+                        + (f"; {caveat_note}" if caveat_note else ""),
                     }
                 )
                 for class_id, metrics in result["report"].items():
@@ -246,10 +267,21 @@ def main() -> int:
                             "f1_score": f"{metrics.get('f1-score', 0.0):.10f}",
                             "support": metrics.get("support", ""),
                             "status": "ok",
-                            "notes": "",
+                            **caveat_fields(),
+                            "notes": caveat_note,
                         }
                     )
-                manifest["runs"].append({**base, "status": "ok", "n_samples": result["n_samples"]})
+                manifest["runs"].append(
+                    {
+                        **base,
+                        "status": "ok",
+                        "n_samples": result["n_samples"],
+                        "crop_width": args.crop_width or None,
+                        "historical_width_caveat": bool(args.crop_width),
+                        "human_researcher_confirmed_crop_assumption": args.crop_width == 512,
+                        "note": caveat_note,
+                    }
+                )
             except Exception as exc:  # noqa: BLE001
                 metric_rows.append(
                     {
@@ -262,6 +294,7 @@ def main() -> int:
                         "loss": "",
                         "n_samples": "",
                         "status": "error",
+                        **caveat_fields(),
                         "notes": repr(exc),
                     }
                 )
@@ -276,10 +309,21 @@ def main() -> int:
                         "f1_score": "",
                         "support": "",
                         "status": "error",
+                        **caveat_fields(),
                         "notes": repr(exc),
                     }
                 )
-                manifest["runs"].append({**base, "status": "error", "error": repr(exc)})
+                manifest["runs"].append(
+                    {
+                        **base,
+                        "status": "error",
+                        "error": repr(exc),
+                        "crop_width": args.crop_width or None,
+                        "historical_width_caveat": bool(args.crop_width),
+                        "human_researcher_confirmed_crop_assumption": args.crop_width == 512,
+                        "note": caveat_note,
+                    }
+                )
 
     metric_fields = [
         "condition",
@@ -296,14 +340,28 @@ def main() -> int:
         "checkpoint_path",
         "dataset_path",
         "status",
+        "crop_width",
+        "historical_width_caveat",
+        "human_researcher_confirmed_crop_assumption",
         "notes",
     ]
     write_csv(out / "baseline_metrics_long.csv", metric_fields, metric_rows)
-    write_csv(
-        out / "classification_report_long.csv",
-        ["condition", "seed", "split", "class_id", "precision", "recall", "f1_score", "support", "status", "notes"],
-        report_rows,
-    )
+    report_fields = [
+        "condition",
+        "seed",
+        "split",
+        "class_id",
+        "precision",
+        "recall",
+        "f1_score",
+        "support",
+        "status",
+        "crop_width",
+        "historical_width_caveat",
+        "human_researcher_confirmed_crop_assumption",
+        "notes",
+    ]
+    write_csv(out / "classification_report_long.csv", report_fields, report_rows)
 
     ok_rows = [row for row in metric_rows if row["status"] == "ok"]
     summary_rows = []
@@ -323,7 +381,8 @@ def main() -> int:
                     "n_seeds": len(rows),
                     "seeds": "|".join(row["seed"] for row in rows),
                     "status": "ok",
-                    "notes": "",
+                    **caveat_fields(),
+                    "notes": caveat_note,
                 }
             )
     if not summary_rows:
@@ -337,14 +396,95 @@ def main() -> int:
                 "n_seeds": 0,
                 "seeds": "",
                 "status": "no_successful_evaluations",
+                **caveat_fields(),
                 "notes": "See baseline_metrics_long.csv error rows.",
             }
         )
-    write_csv(
-        out / "baseline_metrics_summary.csv",
-        ["condition", "split", "metric", "mean", "std", "n_seeds", "seeds", "status", "notes"],
-        summary_rows,
-    )
+    summary_fields = [
+        "condition",
+        "split",
+        "metric",
+        "mean",
+        "std",
+        "n_seeds",
+        "seeds",
+        "status",
+        "crop_width",
+        "historical_width_caveat",
+        "human_researcher_confirmed_crop_assumption",
+        "notes",
+    ]
+    write_csv(out / "baseline_metrics_summary.csv", summary_fields, summary_rows)
+
+    paper_rows = []
+    for (condition, split), rows in sorted(grouped.items()):
+        metric_values = {
+            metric: np.array([float(row[metric]) for row in rows])
+            for metric in ["accuracy", "macro_f1", "weighted_f1", "macro_precision", "macro_recall"]
+        }
+        paper_rows.append(
+            {
+                "condition": condition,
+                "model_family": "no_attention_6ch",
+                "split": split,
+                "accuracy_mean": f"{float(metric_values['accuracy'].mean()):.10f}",
+                "accuracy_std": f"{float(metric_values['accuracy'].std(ddof=0)):.10f}",
+                "macro_f1_mean": f"{float(metric_values['macro_f1'].mean()):.10f}",
+                "macro_f1_std": f"{float(metric_values['macro_f1'].std(ddof=0)):.10f}",
+                "weighted_f1_mean": f"{float(metric_values['weighted_f1'].mean()):.10f}",
+                "weighted_f1_std": f"{float(metric_values['weighted_f1'].std(ddof=0)):.10f}",
+                "macro_precision_mean": f"{float(metric_values['macro_precision'].mean()):.10f}",
+                "macro_precision_std": f"{float(metric_values['macro_precision'].std(ddof=0)):.10f}",
+                "macro_recall_mean": f"{float(metric_values['macro_recall'].mean()):.10f}",
+                "macro_recall_std": f"{float(metric_values['macro_recall'].std(ddof=0)):.10f}",
+                "n_seeds": len(rows),
+                "n_samples": rows[0]["n_samples"] if rows else "",
+                **caveat_fields(),
+                "paper_use_status": "main_candidate_with_width_caveat" if args.crop_width == 512 else "main_candidate",
+                "notes": caveat_note,
+            }
+        )
+    paper_fields = [
+        "condition",
+        "model_family",
+        "split",
+        "accuracy_mean",
+        "accuracy_std",
+        "macro_f1_mean",
+        "macro_f1_std",
+        "weighted_f1_mean",
+        "weighted_f1_std",
+        "macro_precision_mean",
+        "macro_precision_std",
+        "macro_recall_mean",
+        "macro_recall_std",
+        "n_seeds",
+        "n_samples",
+        "crop_width",
+        "historical_width_caveat",
+        "human_researcher_confirmed_crop_assumption",
+        "paper_use_status",
+        "notes",
+    ]
+    write_csv(out / "baseline_metrics_paper_table.csv", paper_fields, paper_rows)
+
+    notes = [
+        "# Baseline Metrics Notes",
+        "",
+        f"- Evaluated checkpoints: {len(checkpoints)}.",
+        f"- Successful metric rows: {len(ok_rows)}.",
+        f"- Splits evaluated: {', '.join(args.splits)}.",
+        f"- Crop width: {args.crop_width or 'none'}.",
+        f"- Historical width caveat: {historical_width_caveat}.",
+        f"- Human researcher confirmed crop assumption: {human_confirmed}.",
+        f"- Note: {caveat_note if caveat_note else 'No historical crop assumption used.'}",
+        "",
+        "## Paper Use",
+        "",
+        "- These rows are candidate Table 1 baseline metrics only under the recorded historical-width caveat.",
+        "- Cross-condition splits are not evaluated here and should not be inferred from this table.",
+    ]
+    (out / "baseline_metrics_notes.md").write_text("\n".join(notes) + "\n", encoding="utf-8")
 
     manifest["status"] = "ok" if ok_rows else "no_successful_evaluations"
     manifest["n_checkpoints"] = len(checkpoints)

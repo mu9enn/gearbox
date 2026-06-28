@@ -42,6 +42,11 @@ def main() -> int:
     edge_summary = read_csv(out / "pcdag_edges" / "pcdag_edge_label_summary.csv")
     baseline_metrics = read_csv(out / "baseline_metrics" / "baseline_metrics_long.csv")
     baseline_status = Counter(row.get("status", "") for row in baseline_metrics)
+    baseline_ok = baseline_status.get("ok", 0)
+    baseline_crop_widths = sorted({row.get("crop_width", "") for row in baseline_metrics if row.get("status") == "ok"})
+    baseline_human_confirmed = any(
+        row.get("human_researcher_confirmed_crop_assumption", "").lower() == "true" for row in baseline_metrics
+    )
     mismatch = read_csv(out / "baseline_metrics" / "checkpoint_dataset_mismatch_report.csv")
     shap_stability = read_csv(out / "shap_seed_stability_summary.csv")
 
@@ -50,11 +55,11 @@ def main() -> int:
             "paper_item": "Table 1",
             "type": "main_table",
             "source_assets": "reports/paper_evidence/baseline_metrics/baseline_metrics_long.csv; ModelTrain/NoAttention/SavedGraphs_6ch",
-            "what_it_shows": "CNN/no-attention diagnostic baseline on train/valid/test",
+            "what_it_shows": "CNN/no-attention diagnostic baseline on test_set under historical 512-width input protocol",
             "paper_claim_supported": "Wavelet-CNN baseline can perform fault diagnosis",
-            "current_status": "blocked_numeric_export",
-            "missing_piece": "Checkpoint/data width mismatch prevents lightweight evaluation on current wavelet_dataset",
-            "recommended_next_action": "Locate original 512-width dataset or regenerate metrics from compatible evaluation script without retraining",
+            "current_status": "available_with_historical_width_caveat" if baseline_ok else "blocked_numeric_export",
+            "missing_piece": "Publication wording must retain the 512-width historical data caveat" if baseline_ok else "Checkpoint/data width mismatch prevents lightweight evaluation on current wavelet_dataset",
+            "recommended_next_action": "Use baseline_metrics_paper_table.csv with caveat; do not use cross_test" if baseline_ok else "Locate original 512-width dataset or regenerate metrics from compatible evaluation script without retraining",
         },
         {
             "paper_item": "Table 2",
@@ -207,13 +212,13 @@ def main() -> int:
             "asset_type": "csv",
             "experiment_family": "baseline_metrics",
             "paper_section_candidate": "Diagnostic Baseline",
-            "evidence_strength": "C",
-            "can_use_in_main": "False",
-            "can_use_in_supplement": "False",
-            "needs_reproduction": "True",
-            "known_risk": "checkpoint expected width 512; current wavelet_dataset width 1024; crop eval is technical compatibility only unless old preprocessing contract is confirmed",
-            "recommended_action": "Do not use crop metrics as paper-grade unless human researcher confirms first-512 equivalence",
-            "notes": f"baseline_status={dict(baseline_status)}; mismatch_rows={len(mismatch)}",
+            "evidence_strength": "B with historical-width caveat" if baseline_ok and baseline_human_confirmed else "C",
+            "can_use_in_main": "True" if baseline_ok and baseline_human_confirmed else "False",
+            "can_use_in_supplement": "True" if baseline_ok else "False",
+            "needs_reproduction": "False" if baseline_ok and baseline_human_confirmed else "True",
+            "known_risk": "checkpoint/SHAP used width 512 while current wavelet_dataset width is 1024; human researcher confirmed current [..., :512] as historical protocol" if baseline_ok else "checkpoint expected width 512; current wavelet_dataset width 1024",
+            "recommended_action": "Use as Table 1 candidate with explicit historical-width caveat; do not use cross_test" if baseline_ok else "Do not use crop metrics as paper-grade unless human researcher confirms first-512 equivalence",
+            "notes": f"baseline_status={dict(baseline_status)}; crop_widths={baseline_crop_widths}; human_confirmed={baseline_human_confirmed}; mismatch_rows={len(mismatch)}",
         },
         {
             "asset_path": "DAG/PC_DAG/Seed_49",
@@ -269,10 +274,11 @@ def main() -> int:
         f"- PC-DAG edge export is available: {sum(int(row['n_edges_total']) for row in edge_summary) if edge_summary else 0} edges, {sum(int(row['n_label_related_edges']) for row in edge_summary) if edge_summary else 0} label-related edges.",
         f"- Strict feature-to-label consistency table is available: {len(strict_consistency)} rows with counts {dict(strict_counts)}.",
         f"- Weak adjacency consistency table is available: {len(adjacency_consistency)} rows with support counts {dict(adjacency_counts)}.",
+        f"- Baseline numeric metrics are available: {baseline_ok} ok rows, crop widths {baseline_crop_widths}, human-confirmed crop assumption={baseline_human_confirmed}.",
         "",
         "## Main Evidence Still Missing",
         "",
-        "- Baseline numeric metrics are not yet paper-grade from current assets: checkpoints expect width 512 while current `wavelet_dataset` width is 1024.",
+        "- Baseline metrics must retain the historical-width caveat: old checkpoint/SHAP used 512-width input; current data are 1024-width; use `[..., :512]` per human researcher confirmation.",
         "- `label_to_feature` and `undirected_with_label` edges are excluded from strong causal-direction evidence.",
         "",
         "## Supplement Candidates",
@@ -287,7 +293,7 @@ def main() -> int:
         "",
         "## Next Minimal Engineering Task",
         "",
-        "- Resolve baseline metric export by locating the original 512-width evaluation dataset or confirming the safe preprocessing slice used by the saved checkpoints.",
+        "- Carry the baseline historical-width caveat into manuscript methods/reproducibility notes.",
         "- Freeze whether manuscript uses strict causal-direction language or weaker causal-adjacency / graph-consistency language.",
     ]
     (out / "paper_evidence_status.md").write_text("\n".join(status_lines) + "\n", encoding="utf-8")

@@ -1,0 +1,25 @@
+condition,view,feature_name,mean_importance_across_seeds,std_importance_across_seeds,mean_rank,std_rank,topk_frequency,n_seeds,paper_interpretation
+Bearing_20_0,channel,ch2,0.17612272677,0.00479627909691,2.2,0.748331477355,1.0,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_20_0,channel,ch8,0.172893983002,0.00810969075695,3.0,1.09544511501,0.6,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_20_0,channel,ch4,0.165225660145,0.0150196394087,3.2,1.93907194297,0.6,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_20_0,frequency,cD2,0.324405027839,0.00371996313983,1.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Bearing_20_0,frequency,cD3,0.23229466537,0.00190708994556,2.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Bearing_20_0,frequency,cD4,0.185917221343,0.00351963203631,3.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Bearing_30_2,channel,ch8,0.174886318926,0.00687212460309,2.4,1.35646599663,0.8,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_30_2,channel,ch2,0.170781361719,0.00283565397003,2.8,0.979795897113,0.8,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_30_2,channel,ch4,0.164755817352,0.0136714297814,3.4,1.8547236991,0.6,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Bearing_30_2,frequency,cD2,0.313855507583,0.00298590450521,1.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Bearing_30_2,frequency,cD3,0.230642322651,0.00441866454147,2.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Bearing_30_2,frequency,cD4,0.189863450182,0.00641318661352,3.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_20_0,channel,ch8,0.181493991992,0.00493532592906,1.4,0.489897948557,1.0,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_20_0,channel,ch4,0.169455232876,0.0157613688578,3.2,1.72046505341,0.6,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_20_0,channel,ch3,0.165082441672,0.0124696613703,4.0,1.67332005307,0.2,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_20_0,frequency,cD2,0.275864807307,0.00529378380675,1.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_20_0,frequency,cD4,0.249576694348,0.0168282378422,2.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_20_0,frequency,cD3,0.201676979717,0.00528540821327,3.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_30_2,channel,ch8,0.17369058672,0.00374841049289,2.2,0.979795897113,0.8,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_30_2,channel,ch4,0.170719290684,0.0165339758405,3.2,2.03960780544,0.6,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_30_2,channel,ch7,0.167404735077,0.006680418601,3.4,1.35646599663,0.4,5,top SHAP channel feature candidate; use as attribution ranking evidence
+Gear_30_2,frequency,cD2,0.289919378007,0.0023563796451,1.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_30_2,frequency,cD3,0.2257124468,0.00676306400991,2.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
+Gear_30_2,frequency,cD4,0.21175449608,0.00510101665963,3.0,0.0,1.0,5,top SHAP frequency feature candidate; use as attribution ranking evidence
