@@ -4,12 +4,13 @@
 
 - SHAP seed-stability ranking is available: 44 rows.
 - PC-DAG edge export is available: 159 edges, 31 label-related edges.
-- Attribution-causality consistency table is available: 44 rows with counts {'low_shap_no_label_edge_uninformative': 16, 'low_shap_label_edge_underused_causal_feature': 3, 'unknown_edge_direction': 22, 'high_shap_label_edge_consistent': 1, 'high_shap_no_label_edge_potential_shortcut': 2}.
+- Strict feature-to-label consistency table is available: 44 rows with counts {'low_shap_without_strict_causal_support': 32, 'low_shap_with_strict_causal_support_underused_feature': 3, 'high_shap_without_strict_causal_support_potential_shortcut': 8, 'high_shap_strict_causal_support': 1}.
+- Weak adjacency consistency table is available: 44 rows with support counts {'no_label_adjacency': 18, 'strict_directed_support': 4, 'weak_label_adjacency_only': 22}.
 
 ## Main Evidence Still Missing
 
-- Baseline numeric metrics are not yet usable from current assets: all checkpoint evaluations failed because checkpoint input width is 512 while current `wavelet_dataset` width is 1024.
-- Some PC-DAG edge directions are `label->feature` or undirected/partially oriented; final manuscript wording needs human review of edge-direction interpretation.
+- Baseline numeric metrics are not yet paper-grade from current assets: checkpoints expect width 512 while current `wavelet_dataset` width is 1024.
+- `label_to_feature` and `undirected_with_label` edges are excluded from strong causal-direction evidence.
 
 ## Supplement Candidates
 
@@ -24,4 +25,4 @@
 ## Next Minimal Engineering Task
 
 - Resolve baseline metric export by locating the original 512-width evaluation dataset or confirming the safe preprocessing slice used by the saved checkpoints.
-- Review PC-DAG edge-direction semantics, then freeze which consistency rows become the main conflict/consistency case studies.
+- Freeze whether manuscript uses strict causal-direction language or weaker causal-adjacency / graph-consistency language.

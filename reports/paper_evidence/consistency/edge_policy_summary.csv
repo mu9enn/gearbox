@@ -1,0 +1,3 @@
+policy,n_features_total,n_high_shap_features,n_high_shap_with_support,n_high_shap_without_support,n_low_shap_with_support,n_low_shap_without_support,interpretation_strength,paper_use_recommendation
+strict_feature_to_label_only,44,9,1,8,3,32,strong_but_sparse,"Use only for conservative causal-direction support; enough for case-study evidence, not broad directional claim."
+weak_label_adjacency,44,9,7,2,19,16,weak_direction_neutral,Use for graph-consistency / label-related adjacency audit; do not claim feature causes label unless strict support exists.

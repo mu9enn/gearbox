@@ -54,6 +54,39 @@ def classify(is_topk: bool, label_edges: list[dict]) -> tuple[str, str, str, str
     return "True", "|".join(relation_types), direction, "unknown_edge_direction"
 
 
+def classify_strict(is_topk: bool, label_edges: list[dict]) -> tuple[bool, str, str]:
+    strict_edges = [row for row in label_edges if row["label_relation_type"] == "feature_to_label"]
+    if is_topk and strict_edges:
+        return True, "high_shap_strict_causal_support", "strong"
+    if is_topk and not strict_edges:
+        return False, "high_shap_without_strict_causal_support_potential_shortcut", "moderate"
+    if (not is_topk) and strict_edges:
+        return True, "low_shap_with_strict_causal_support_underused_feature", "strong"
+    return False, "low_shap_without_strict_causal_support", "moderate"
+
+
+def classify_adjacency(is_topk: bool, label_edges: list[dict]) -> tuple[bool, bool, bool, str, str]:
+    has_any = bool(label_edges)
+    has_strict = any(row["label_relation_type"] == "feature_to_label" for row in label_edges)
+    has_weak_only = has_any and not has_strict
+    if has_strict:
+        level = "strict_directed_support"
+    elif has_weak_only:
+        level = "weak_label_adjacency_only"
+    else:
+        level = "no_label_adjacency"
+
+    if is_topk and has_any:
+        ctype = "high_shap_with_label_adjacency"
+    elif is_topk and not has_any:
+        ctype = "high_shap_without_label_adjacency_potential_shortcut"
+    elif (not is_topk) and has_any:
+        ctype = "low_shap_with_label_adjacency_underused_or_conflicting"
+    else:
+        ctype = "low_shap_without_label_adjacency"
+    return has_any, has_strict, has_weak_only, level, ctype
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".")
@@ -72,6 +105,8 @@ def main() -> int:
     edges = edge_index(edge_rows)
 
     table_rows: list[dict] = []
+    strict_rows: list[dict] = []
+    adjacency_rows: list[dict] = []
     for shap in shap_rows:
         mean_rank = float(shap["mean_rank"])
         is_topk = mean_rank <= args.topk
@@ -107,6 +142,41 @@ def main() -> int:
                 "notes": f"topk_threshold={args.topk}; label_edges={len(label_edges)}",
             }
         )
+        has_strict, strict_type, strict_strength = classify_strict(is_topk, label_edges)
+        has_any_adj, has_strict_adj, has_weak_only, support_level, adjacency_type = classify_adjacency(is_topk, label_edges)
+        strict_sources = "|".join(sorted({row["source_pc_csv"] for row in label_edges if row["label_relation_type"] == "feature_to_label"}))
+        adjacency_sources = "|".join(sorted({row["source_pc_csv"] for row in label_edges}))
+        strict_rows.append(
+            {
+                "condition": shap["condition"],
+                "view": shap["view"],
+                "feature_name": shap["feature_name"],
+                "mean_importance_across_seeds": shap["mean_importance_across_seeds"],
+                "mean_rank": shap["mean_rank"],
+                "std_rank": shap["std_rank"],
+                "topk_frequency": shap["topk_frequency"],
+                "is_topk_shap": str(is_topk),
+                "has_strict_feature_to_label_edge": str(has_strict),
+                "strict_consistency_type": strict_type,
+                "strict_evidence_strength": strict_strength,
+                "edge_source": strict_sources,
+                "notes": f"strict policy uses only feature_to_label edges; topk_threshold={args.topk}; label_edges={len(label_edges)}",
+            }
+        )
+        adjacency_rows.append(
+            {
+                "condition": shap["condition"],
+                "view": shap["view"],
+                "feature_name": shap["feature_name"],
+                "is_topk_shap": str(is_topk),
+                "has_any_label_adjacency": str(has_any_adj),
+                "has_strict_feature_to_label_edge": str(has_strict_adj),
+                "has_only_weak_or_conflicting_label_adjacency": str(has_weak_only),
+                "adjacency_support_level": support_level,
+                "adjacency_consistency_type": adjacency_type,
+                "notes": f"weak adjacency includes label_to_feature/undirected_with_label without causal-direction claim; sources={adjacency_sources}",
+            }
+        )
 
     write_csv(
         out / "attribution_causality_consistency_table.csv",
@@ -130,6 +200,41 @@ def main() -> int:
             "notes",
         ],
         table_rows,
+    )
+    write_csv(
+        out / "strict_feature_to_label_consistency_table.csv",
+        [
+            "condition",
+            "view",
+            "feature_name",
+            "mean_importance_across_seeds",
+            "mean_rank",
+            "std_rank",
+            "topk_frequency",
+            "is_topk_shap",
+            "has_strict_feature_to_label_edge",
+            "strict_consistency_type",
+            "strict_evidence_strength",
+            "edge_source",
+            "notes",
+        ],
+        strict_rows,
+    )
+    write_csv(
+        out / "adjacency_weak_consistency_table.csv",
+        [
+            "condition",
+            "view",
+            "feature_name",
+            "is_topk_shap",
+            "has_any_label_adjacency",
+            "has_strict_feature_to_label_edge",
+            "has_only_weak_or_conflicting_label_adjacency",
+            "adjacency_support_level",
+            "adjacency_consistency_type",
+            "notes",
+        ],
+        adjacency_rows,
     )
 
     grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)

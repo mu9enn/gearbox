@@ -91,7 +91,15 @@ def split_keys(split: str) -> tuple[str, str]:
     return f"{split}_set", f"{split}_label"
 
 
-def evaluate_checkpoint(root: Path, checkpoint: Path, data_path: Path, split: str, batch_size: int, device: torch.device):
+def evaluate_checkpoint(
+    root: Path,
+    checkpoint: Path,
+    data_path: Path,
+    split: str,
+    batch_size: int,
+    device: torch.device,
+    crop_width: int | None,
+):
     sys.path.insert(0, str(root))
     from Common.NetWorkFrame import CNNNetWorkNoAttention
 
@@ -106,12 +114,17 @@ def evaluate_checkpoint(root: Path, checkpoint: Path, data_path: Path, split: st
         raise ValueError(f"expected 4D split array, got {data_shape}")
     if expected_width is None:
         raise ValueError("could_not_infer_checkpoint_expected_width")
-    if data_shape[-1] != expected_width:
+    effective_width = crop_width if crop_width else data_shape[-1]
+    if crop_width and crop_width > data_shape[-1]:
+        raise ValueError(f"crop_width_gt_dataset_width: crop_width={crop_width}, dataset_width={data_shape[-1]}")
+    if effective_width != expected_width:
         raise ValueError(f"incompatible_input_width: checkpoint_expected={expected_width}, dataset_width={data_shape[-1]}")
 
     with np.load(data_path, allow_pickle=False) as npz:
         x = np.asarray(npz[data_key], dtype=np.float32)
         y = np.asarray(npz[label_key], dtype=np.int64)
+    if crop_width:
+        x = x[..., :crop_width]
 
     model = CNNNetWorkNoAttention(class_number=int(max(y.max() + 1, 5)))
     model.load_state_dict(state)
@@ -159,6 +172,7 @@ def main() -> int:
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--max-checkpoints", type=int, default=0, help="0 means all checkpoints")
+    parser.add_argument("--crop-width", type=int, default=0, help="Optional last-axis crop width before evaluation")
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
@@ -182,6 +196,7 @@ def main() -> int:
         "model_dir": relpath(model_dir, root),
         "splits": args.splits,
         "device": str(device),
+        "crop_width": args.crop_width or None,
         "status": "started",
         "runs": [],
     }
@@ -202,7 +217,7 @@ def main() -> int:
             try:
                 if not data_path.exists():
                     raise FileNotFoundError(f"dataset missing: {data_path}")
-                result = evaluate_checkpoint(root, checkpoint, data_path, split, args.batch_size, device)
+                result = evaluate_checkpoint(root, checkpoint, data_path, split, args.batch_size, device, args.crop_width or None)
                 metric_rows.append(
                     {
                         **base,
@@ -214,7 +229,7 @@ def main() -> int:
                         "loss": f"{result['loss']:.10f}",
                         "n_samples": result["n_samples"],
                         "status": "ok",
-                        "notes": "evaluated_existing_checkpoint_no_cross_split",
+                        "notes": f"evaluated_existing_checkpoint_no_cross_split; crop_width={args.crop_width or 'none'}",
                     }
                 )
                 for class_id, metrics in result["report"].items():
