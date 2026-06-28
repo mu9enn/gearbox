@@ -1,0 +1,85 @@
+relative_path,file_size_mb,keys,array_name,shape,dtype,nan_count_if_numeric,label_distribution_if_label
+DAG/Noise/ball_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/ball_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/bearing_normal_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/bearing_normal_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/chipped_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/chipped_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/comb_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/comb_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/gear_normal_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/gear_normal_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/inner_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/inner_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/miss_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/miss_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/outer_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/outer_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/root_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/root_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/surface_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/Noise/surface_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/ball_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/ball_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/bearing_normal_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/bearing_normal_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/chipped_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/chipped_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/comb_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/comb_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/gear_normal_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/gear_normal_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/inner_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/inner_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/miss_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/miss_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/outer_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/outer_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/root_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/root_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/surface_20_0.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+DAG/PureData/surface_30_2.npz,47.999,pure_data,pure_data,1048559x6,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_set,5455x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_set,510x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_set,680x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_set,510x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_set,6140x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_label,5455,int64,0,0:1091|1:1091|2:1091|3:1091|4:1091
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_label,510,int64,0,0:102|1:102|2:102|3:102|4:102
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_label,680,int64,0,0:136|1:136|2:136|3:136|4:136
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_label,510,int64,0,0:102|1:102|2:102|3:102|4:102
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_label,6140,int64,0,0:1228|1:1228|2:1228|3:1228|4:1228
+wavelet_dataset/Bearing_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,label_mapping,5x2,<U21,skipped: non_numeric,0:1|1:1|2:1|3:1|4:1|ball_20_0:1|comb_20_0:1|health_20_0:1|inner_20_0:1|outer_20_0:1
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_set,8190x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_set,765x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_set,1020x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_set,765x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_set,9210x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_label,8190,int64,0,0:1638|1:1638|2:1638|3:1638|4:1638
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_label,765,int64,0,0:153|1:153|2:153|3:153|4:153
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_label,1020,int64,0,0:204|1:204|2:204|3:204|4:204
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_label,765,int64,0,0:153|1:153|2:153|3:153|4:153
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_label,9210,int64,0,0:1842|1:1842|2:1842|3:1842|4:1842
+wavelet_dataset/Bearing_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,label_mapping,5x2,<U21,skipped: non_numeric,0:1|1:1|2:1|3:1|4:1|ball_30_2:1|comb_30_2:1|health_30_2:1|inner_30_2:1|outer_30_2:1
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_set,5455x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_set,510x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_set,680x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_set,510x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_set,6140x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_label,5455,int64,0,0:1091|1:1091|2:1091|3:1091|4:1091
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_label,510,int64,0,0:102|1:102|2:102|3:102|4:102
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_label,680,int64,0,0:136|1:136|2:136|3:136|4:136
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_label,510,int64,0,0:102|1:102|2:102|3:102|4:102
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_label,6140,int64,0,0:1228|1:1228|2:1228|3:1228|4:1228
+wavelet_dataset/Gear_20_0.npz,3739.324,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,label_mapping,5x2,<U21,skipped: non_numeric,0:1|1:1|2:1|3:1|4:1|Health_20_0:1|chipped_20_0:1|miss_20_0:1|root_20_0:1|surface_20_0:1
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_set,8190x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_set,765x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_set,1020x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_set,765x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_set,9210x6x6x1024,float64,skipped: elements_gt_1000000,
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,train_label,8190,int64,0,0:1638|1:1638|2:1638|3:1638|4:1638
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,valid_label,765,int64,0,0:153|1:153|2:153|3:153|4:153
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,test_label,1020,int64,0,0:204|1:204|2:204|3:204|4:204
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_finetune_label,765,int64,0,0:153|1:153|2:153|3:153|4:153
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,cross_test_label,9210,int64,0,0:1842|1:1842|2:1842|3:1842|4:1842
+wavelet_dataset/Gear_30_2.npz,5611.093,train_set|valid_set|test_set|cross_finetune_set|cross_test_set|train_label|valid_label|test_label|cross_finetune_label|cross_test_label|label_mapping,label_mapping,5x2,<U21,skipped: non_numeric,0:1|1:1|2:1|3:1|4:1|Health_30_2:1|chipped_30_2:1|miss_30_2:1|root_30_2:1|surface_30_2:1
