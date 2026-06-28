@@ -1,0 +1,109 @@
+# Project documentation and source are intended to stay trackable.
+!docs/
+!docs/**
+!configs/
+!configs/**
+!examples/
+!examples/**
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Local environments and editor state
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.vscode/
+.idea/
+.DS_Store
+._*
+.AppleDouble/
+Thumbs.db
+
+# Logs and local experiment trackers
+*.log
+logs/
+runs/
+wandb/
+mlruns/
+mlartifacts/
+
+# Raw and intermediate datasets
+DataSets/
+data/
+datasets/
+raw_data/
+processed_data/
+cache/
+wavelet_dataset/*.npz
+DAG/PureData/
+DAG/Noise/
+
+# Large SHAP and generated explanation arrays
+CalculateShapValues/**/Seed_*/
+CalculateShapValues/**/ShapResults/
+ModelTrain/NoAttention/SHAP_freq/ShapResults/
+
+# Model checkpoints and exported model binaries
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.onnx.data
+checkpoints/
+models/
+weights/
+ModelTrain/**/SavedModels*/
+GNNCausal/trained_models/
+CWRU/trained_models/
+
+# Large numeric artifacts
+*.npy
+*.npz
+*.mat
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+
+# Archives
+*.rar
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+# LaTeX build artifacts, keep source files trackable
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+
+# Secrets and private keys
+*secret*
+*token*
+*credential*
+*private*
+*.pem
+*.key
+id_rsa
+id_ed25519
