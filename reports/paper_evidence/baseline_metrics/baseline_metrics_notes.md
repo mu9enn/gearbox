@@ -8,7 +8,10 @@
 - Human researcher confirmed crop assumption: true.
 - Note: old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; human researcher confirmed using first 512 points via [..., :512] to recover historical evaluation protocol
 
-## Paper Use
+## Current Interpretation
 
-- These rows are candidate Table 1 baseline metrics only under the recorded historical-width caveat.
+- These rows are no longer treated as candidate Table 1 baseline metrics.
+- The near-random local result is a reproducibility/provenance diagnostic artifact.
+- It should not be used to judge collaborator historical experiments or to support/refute the paper topic.
 - Cross-condition splits are not evaluated here and should not be inferred from this table.
+- Paper planning should recover collaborator-provided baseline metrics or schedule a later formal rerun under a frozen protocol.

@@ -440,8 +440,11 @@ def main() -> int:
                 "n_seeds": len(rows),
                 "n_samples": rows[0]["n_samples"] if rows else "",
                 **caveat_fields(),
-                "paper_use_status": "main_candidate_with_width_caveat" if args.crop_width == 512 else "main_candidate",
-                "notes": caveat_note,
+                "paper_use_status": "local_reproducibility_diagnostic_only" if args.crop_width == 512 else "diagnostic_only",
+                "notes": (
+                    (caveat_note + "; " if caveat_note else "")
+                    + "do not use local crop-width evaluation as paper evidence without a later formal reproduction protocol"
+                ),
             }
         )
     paper_fields = [
@@ -479,9 +482,10 @@ def main() -> int:
         f"- Human researcher confirmed crop assumption: {human_confirmed}.",
         f"- Note: {caveat_note if caveat_note else 'No historical crop assumption used.'}",
         "",
-        "## Paper Use",
+        "## Current Interpretation",
         "",
-        "- These rows are candidate Table 1 baseline metrics only under the recorded historical-width caveat.",
+        "- These rows are a local reproducibility/provenance diagnostic artifact, not candidate Table 1 metrics.",
+        "- Do not use the crop-width local evaluation as paper evidence.",
         "- Cross-condition splits are not evaluated here and should not be inferred from this table.",
     ]
     (out / "baseline_metrics_notes.md").write_text("\n".join(notes) + "\n", encoding="utf-8")

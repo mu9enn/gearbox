@@ -1,5 +1,5 @@
 item,status,blocking_level,evidence_path,next_action,owner
-NoAttention baseline metrics on test_set,complete_with_caveat,P1,reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv,Use with historical-width caveat; do not use cross_test as main evidence.,Codex/ChatGPT
+NoAttention baseline metrics on test_set,missing_trusted_collaborator_numeric_table,P0,ModelTrain/NoAttention; reports/paper_planning/codex_local_repro_gap_note.md,Recover collaborator numeric metrics or plan formal rerun; do not use local crop-width diagnostic as paper evidence.,Codex/ChatGPT/human researcher
 SHAP stability main table,complete,non_blocking,reports/paper_evidence/final_tables/table_shap_stability_main.csv,ChatGPT selects final narrative features.,ChatGPT
 Strict feature_to_label consistency,complete_sparse,non_blocking,reports/paper_evidence/final_tables/table_strict_consistency_main.csv,Use strict direction only for listed cases.,ChatGPT
 Weak adjacency graph-consistency audit,complete,non_blocking,reports/paper_evidence/final_tables/table_weak_adjacency_audit_main.csv,Use conservative graph-consistency wording.,ChatGPT

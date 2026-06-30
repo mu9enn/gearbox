@@ -75,7 +75,7 @@ def shap_path(condition: str, root: Path) -> str:
     )
 
 
-def build_baseline_summary(root: Path, evidence: Path) -> list[dict]:
+def build_baseline_diagnostic_summary(root: Path, evidence: Path) -> list[dict]:
     paper = read_df(evidence / "baseline_metrics" / "baseline_metrics_paper_table.csv")
     if paper.empty:
         return []
@@ -89,7 +89,7 @@ def build_baseline_summary(root: Path, evidence: Path) -> list[dict]:
                 "weighted_f1": f"{float(row['weighted_f1_mean']):.4f} +/- {float(row['weighted_f1_std']):.4f}",
                 "n_seeds": int(row["n_seeds"]),
                 "n_samples": int(row["n_samples"]),
-                "paper_use_status": row["paper_use_status"],
+                "paper_use_status": "local_reproducibility_diagnostic_only",
                 "caveat": NOTE_512,
             }
         )
@@ -426,7 +426,7 @@ def build_figures_and_cases(root: Path, evidence: Path) -> tuple[list[dict], lis
             "view": "baseline",
             "what_it_shows": "existing baseline confusion or training curve asset",
             "why_selected": "Supplementary diagnostic behavior illustration.",
-            "risk_or_caveat": f"Numeric table uses 512 crop assumption: {NOTE_512}",
+            "risk_or_caveat": "Baseline numeric crop-width table is diagnostic-only; use existing confusion/curve assets as supplement until collaborator metrics are recovered.",
             "status": "supplement_existing_asset_candidate",
         },
     ]
@@ -443,23 +443,23 @@ def build_figures_and_cases(root: Path, evidence: Path) -> tuple[list[dict], lis
         "- Fig1 should be drawn by the author because no polished framework overview exists.",
         "- PC-DAG figures should be described under the conservative edge policy: feature_to_label is strict support; label_to_feature and undirected edges are weak adjacency only.",
         "- Shortcut-risk cases are candidates, not confirmed shortcuts.",
-        f"- Baseline supplement inherits the historical-width caveat: {NOTE_512}.",
+        "- Baseline supplement should use existing collaborator figures only; local crop-width numeric table is diagnostic-only.",
     ]
     (final_figures / "figure_selection_notes.md").write_text("\n".join(notes) + "\n", encoding="utf-8")
     return figures, case_rows
 
 
 def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], cases: list[dict], tables: dict[str, pd.DataFrame]) -> None:
-    baseline_rows = build_baseline_summary(root, evidence)
+    baseline_rows = build_baseline_diagnostic_summary(root, evidence)
     final_manifest_rows = [
         {
             "asset_path": "reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv",
             "asset_type": "csv",
-            "paper_role": "main Table 1 candidate",
-            "evidence_strength": "B with historical-width caveat",
-            "paper_use_status": "main_candidate_with_width_caveat",
-            "known_caveat": NOTE_512,
-            "recommended_use": "Report no-attention CNN baseline metrics on test_set only; do not infer cross-condition robustness.",
+            "paper_role": "local reproducibility diagnostic",
+            "evidence_strength": "D diagnostic only",
+            "paper_use_status": "do_not_use_as_paper_evidence",
+            "known_caveat": "Local crop-width-512 result is near random and reflects current code/data/checkpoint provenance gap; it is not collaborator historical evidence.",
+            "recommended_use": "Keep only as reproducibility/provenance warning; recover collaborator baseline metrics or formally rerun later.",
         },
         {
             "asset_path": "reports/paper_evidence/final_tables/table_shap_stability_main.csv",
@@ -516,11 +516,11 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
     checklist = [
         {
             "item": "NoAttention baseline metrics on test_set",
-            "status": "complete_with_caveat" if baseline_rows else "missing",
-            "blocking_level": "P1",
-            "evidence_path": "reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv",
-            "next_action": "Use with historical-width caveat; do not use cross_test as main evidence.",
-            "owner": "Codex/ChatGPT",
+            "status": "missing_trusted_collaborator_numeric_table",
+            "blocking_level": "P0",
+            "evidence_path": "ModelTrain/NoAttention; reports/paper_planning/codex_local_repro_gap_note.md",
+            "next_action": "Recover collaborator numeric metrics or plan formal rerun; do not use local crop-width diagnostic as paper evidence.",
+            "owner": "Codex/ChatGPT/human researcher",
         },
         {
             "item": "SHAP stability main table",
@@ -583,7 +583,7 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
     underused_df = read_df(evidence / "final_tables" / "table_underused_causal_candidates.csv")
 
     baseline_text = "\n".join(
-        f"- {r['condition']}: accuracy {r['accuracy']}; macro-F1 {r['macro_f1']}; weighted-F1 {r['weighted_f1']}; n={r['n_samples']}; seeds={r['n_seeds']}."
+        f"- Diagnostic only {r['condition']}: accuracy {r['accuracy']}; macro-F1 {r['macro_f1']}; n={r['n_samples']}; do not use as paper evidence."
         for r in baseline_rows
     )
     package = [
@@ -591,8 +591,8 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
         "",
         "## Completed Structured Evidence",
         "",
-        "- Baseline metrics were recovered for existing NoAttention checkpoints on `test_set` with `--crop-width 512`.",
-        f"- Historical-width caveat: {NOTE_512}.",
+        "- Local baseline compatibility metrics were produced with `--crop-width 512`, but these are now classified as a reproducibility/provenance diagnostic artifact, not as paper-candidate evidence.",
+        "- Crop-width diagnostic caveat: old checkpoint/SHAP used 512-width input; current wavelet data are 1024-width; the near-random local result should not be used to judge collaborator historical results.",
         f"- SHAP stability table rows: {len(tables.get('shap', []))}.",
         f"- Strict feature-to-label support rows: {len(strict_df)}.",
         f"- Weak adjacency audit rows: {len(weak_df)}.",
@@ -601,16 +601,21 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
         "",
         "## Baseline Summary",
         "",
-        baseline_text if baseline_text else "- Baseline summary not available.",
+        "- The crop-width local baseline numbers are not paper-candidate results and should not be used in manuscript tables.",
+        "- The paper still needs collaborator-provided baseline numeric metrics or a later formal rerun under a frozen protocol.",
+        "- Existing collaborator baseline assets remain available as figures/checkpoints under `ModelTrain/NoAttention/`, especially training curves and confusion/F1 plots.",
         "",
         "## Main Table Candidates",
         "",
-        "- `reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv`",
         "- `reports/paper_evidence/final_tables/table_shap_stability_main.csv`",
         "- `reports/paper_evidence/final_tables/table_strict_consistency_main.csv`",
         "- `reports/paper_evidence/final_tables/table_weak_adjacency_audit_main.csv`",
         "- `reports/paper_evidence/final_tables/table_shortcut_risk_candidates.csv`",
         "- `reports/paper_evidence/final_tables/table_underused_causal_candidates.csv`",
+        "",
+        "Diagnostic-only table:",
+        "",
+        "- `reports/paper_evidence/baseline_metrics/baseline_metrics_paper_table.csv`",
         "",
         "## Main Figure Candidates",
         "",
@@ -619,7 +624,6 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
         "",
         "## Strong Claims Currently Supported",
         "",
-        "- Existing NoAttention CNN checkpoints can be evaluated on the historical 512-width input protocol, with the caveat recorded.",
         "- SHAP provides seed-stability rankings for channel and frequency features.",
         "- Strict feature_to_label PC-DAG support exists for a small set of features.",
         "- Weak label adjacency can support an attribution-graph consistency/conflict audit.",
@@ -628,18 +632,19 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
         "",
         "- Do not describe label_to_feature or undirected_with_label edges as strict causal direction.",
         "- Do not present shortcut-risk candidates as confirmed shortcuts.",
-        "- Do not describe baseline metrics without the 512-width historical data caveat.",
+        "- Do not use local crop-width baseline metrics as paper evidence.",
         "",
         "## Results Not For Strong Main Claims",
         "",
         "- Old cross-condition results are limitation/risk only due to documented split overlap.",
         "- GNN causal enhancement remains future work rather than a main contribution.",
         "- CWRU/attention experiments remain optional support unless separately reproduced.",
+        "- Local crop-width baseline metrics are reproducibility diagnostics only and should not enter the evidence chain.",
         "",
         "## Recommended First Assets For ChatGPT",
         "",
         "- Start from `final_evidence_manifest.csv` and `final_paper_readiness_checklist.csv`.",
-        "- Use baseline paper table for Table 1 with caveat.",
+        "- Do not use the local crop-width baseline paper table as Table 1. Recover collaborator numeric metrics or plan a formal rerun later.",
         "- Use SHAP and strict/weak consistency tables for the main graph-consistency audit story.",
         "- Use selected case studies to choose the main narrative examples.",
         "",
@@ -647,7 +652,7 @@ def build_manifest_and_package(root: Path, evidence: Path, figures: list[dict], 
         "",
         "- Author should draw the framework overview figure.",
         "- Existing SHAP/DAG figures likely need publication styling.",
-        "- Manuscript methods must state the 512-width historical input caveat.",
+        "- Baseline numeric evidence remains a follow-up item: recover collaborator metrics or formally rerun after protocol freeze.",
     ]
     (evidence / "final_evidence_package.md").write_text("\n".join(package) + "\n", encoding="utf-8")
 
